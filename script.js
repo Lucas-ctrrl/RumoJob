@@ -370,6 +370,10 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Por favor, escolha apenas 4 opções.");
         return;
       }
+      if (selectedInterests.includes("Automação") && selectedInterests.includes("Informatica") ){
+        alert("Por Favor, escolha apenas uma área.");
+        return;
+      }
 
       const bestMatch = professions.find((profession) =>
         selectedInterests.every((interest) =>
