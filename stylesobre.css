@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+}
+
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+.sub-header{
+    background-color: whitesmoke;
+    max-width: 100%;
+    align-items: center;
+}
+
+#textomenu{
+    float: left;
+    color: black;
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18pt;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+.botao-menu{
+    float: left;
+}
+
+.Menu-nome {
+    margin-left: 44%;
+    margin-right: 36%;
+    width: fit-content;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 34pt;
+}
+
+.Menu-nome > a{
+    color: black;
+}
+
+#login{
+    visibility: visible;
+}
+
+.login-container{
+    visibility: visible;
+    max-width: fit-content;
+}
+
+
+.login{
+    cursor: pointer;
+    padding: 10px;
+    background-color: cadetblue;
+    font-size: larger;
+    color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+.login:hover{
+    transition: 0.4s;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgb(87, 190, 194);
+    font-size: larger;
+    color: beige;
+    border-radius: 10px;
+}
+
+#menu-hamb {
+    color: none;
+}
+
+.menu-destaques{
+    background-color: black;
+    padding: 4px;
+    background-size: cover;
+}
+
+.menu-destaques ul{
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+::marker{
+    font-size: 18pt;
+    content: '✱ ';
+    color: rgb(97, 97, 97);
+
+}
+
+.menu-destaques a{
+    color: white;
+    font-size: 18pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-image: url(medias/fundosobrenos.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.textocontainer{
+    color: whitesmoke;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.texto{
+    width: 75%;
+    font-size: 3.91ch;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 1.5%;
+    margin-left: 5%;
+}
+
+.titulo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5ch;
+    margin-top: 5%;
+    margin-left: 6%;
+}
+
+.video{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    margin-top: 6%;
+    margin-right: 5%;
+}
+
+h2{
+    margin-bottom: 1%;
+}

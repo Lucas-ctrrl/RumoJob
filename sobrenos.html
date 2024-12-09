@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="stylesobre.css">
+</head>
+<body>
+    <header>
+        <div class="sub-header container">
+            <div class="row">
+                <div class="Menu-nome">
+                    <a href="index.html">
+                        RumoJob
+                    </a>
+                </div>
+                <div id="login" class="login-container">
+                    <a href="entrar.html" class="login">Entrar/Cadastrar</a>
+                </div>
+            </div>
+            <div class="menu-destaques">
+                <ul id="opcoes">
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                    <li><a href="forms.html">Formulário</a></li>
+                    <li><a href="SAC.html">SAC</a></li>
+                    <li id="reg"><a href="create.html">Registro de Profissão</a></li>
+                </ul>
+            </div>
+        </div>
+    <script>
+        if (JSON.parse(sessionStorage.getItem('isAdmin')) == true ){
+            document.getElementById("login").style.visibility = "hidden";
+            console.log(JSON.parse(sessionStorage.getItem('isAdmin')))
+            console.log(JSON.parse(sessionStorage.getItem("logged")))
+        }else
+            if (JSON.parse(sessionStorage.getItem("logged") === "true")){
+                document.getElementById("login").style.visibility = "hidden";
+                console.log(JSON.parse(sessionStorage.getItem("logged")))
+                document.getElementById("reg").remove();
+        }else
+            if (JSON.parse(sessionStorage.getItem("logged") !== true) && JSON.parse(sessionStorage.getItem('isAdmin')) !== true){
+                document.getElementById("login").style.visibility = "visible";
+                document.getElementById("reg").remove();
+        }
+    </script>    
+    </header>
+<body>
+    <div class="textocontainer">
+        <div class="informacoes">
+            <div class="titulo">
+                <h1>Quem somos nós?</h1>
+            </div>
+            <div class="texto">
+                <p>A RumoJob é uma plataforma inovadora que ajuda as pessoas a encontrar oportunidades
+                    de emprego alinhadas com suas habilidades e aspirações. Sua missão é realçar o potencial
+                    de empregabilidade nas áreas de preferência decada usuário, conectando-os às empresas relevantes.
+                    A plataforma oferece uma abordagem personalizada, permitindo que os usuários explorem opções de 
+                    carreira com base em seus conhecimentos e experiências. Nossa empresa preza a honestidade e 
+                    transparência e com nossa mentalidade focamos em ajudar o mercado de trabalho ao proporcionar
+                    informações úteis para a formação de profissionais mais aptos.</p>
+            </div>
+        </div>
+        <div class="video">
+            <h2>Vídeo sobre o projeto:</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XO7Mk-W2RlU?si=rK_pb_NnXya0Yvox" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>

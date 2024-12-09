@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="sub-header container">
+            <div class="row">
+                <div class="Menu-nome">
+                    <a href="index.html">
+                        RumoJob
+                    </a>
+                </div>
+                <div id="login" class="login-container">
+                    <a href="entrar.html" class="login">Entrar/Cadastrar</a>
+                </div>
+            </div>
+            <div class="menu-destaques">
+                <ul id="opcoes">
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                    <li><a href="forms.html">Formulário</a></li>
+                    <li><a href="SAC.html">SAC</a></li>
+                    <li id="reg"><a href="create.html">Registro de Profissão</a></li>
+                </ul>
+            </div>
+        </div>
+    <script>
+        if (JSON.parse(sessionStorage.getItem('isAdmin')) == true ){
+            document.getElementById("login").style.visibility = "hidden";
+            console.log(JSON.parse(sessionStorage.getItem('isAdmin')))
+            console.log(JSON.parse(sessionStorage.getItem("logged")))
+        }else
+            if (JSON.parse(sessionStorage.getItem("logged") === "true")){
+                document.getElementById("login").style.visibility = "hidden";
+                console.log(JSON.parse(sessionStorage.getItem("logged")))
+                document.getElementById("reg").remove();
+        }else
+            if (JSON.parse(sessionStorage.getItem("logged") !== true) && JSON.parse(sessionStorage.getItem('isAdmin')) !== true){
+                document.getElementById("login").style.visibility = "visible";
+                document.getElementById("reg").remove();
+        }
+    </script>    
+    </header>
+    <div class="logosite"><img src="medias/rumojoblogo.jpeg" width="343" height="319" alt=""></div>
+    <main>
+        <div class="descricaosite">
+            <div class="texto">
+                <h1>O quê fazemos?</h1>
+            </div>
+            <div class="paragrafo">
+                <p>
+                    Nossa missão é realçar o potencial de empregabilidade nas áreas de preferência de cada usuário,
+                    conectando-os a empresas relevantes. A RumoJob busca capacitar os indivíduos a tomar decisões
+                    informadas sobre suas carreiras, fornecendo percepções valiosas sobre oportunidades e habilidades
+                    necessárias para o sucesso.
+                </p>
+            </div>
+            <div class="butaosaiba">
+                <a href="forms.html" type="button" id="saibamais">Saiba Mais</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

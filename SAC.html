@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="stylesac.css">
+</head>
+<body>
+    <header>
+        <div class="sub-header container">
+            <div class="row">
+                <div class="Menu-nome">
+                    <a href="index.html">
+                        RumoJob
+                    </a>
+                </div>
+                <div id="login" class="login-container">
+                    <a href="entrar.html" class="login">Entrar/Cadastrar</a>
+                </div>
+            </div>
+            <div class="menu-destaques">
+                <ul id="opcoes">
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                    <li><a href="forms.html">Formulário</a></li>
+                    <li><a href="SAC.html">SAC</a></li> 
+                    <li id="reg"><a href="create.html">Registro de Profissão</a></li>
+                </ul>
+            </div>
+        </div>
+    <script>
+        if (JSON.parse(sessionStorage.getItem('isAdmin')) == true ){
+            document.getElementById("login").style.visibility = "hidden";
+            console.log(JSON.parse(sessionStorage.getItem('isAdmin')))
+            console.log(JSON.parse(sessionStorage.getItem("logged")))
+        }else
+            if (JSON.parse(sessionStorage.getItem("logged") === "true")){
+                document.getElementById("login").style.visibility = "hidden";
+                console.log(JSON.parse(sessionStorage.getItem("logged")))
+                document.getElementById("reg").remove();
+        }else
+            if (JSON.parse(sessionStorage.getItem("logged") !== true) && JSON.parse(sessionStorage.getItem('isAdmin')) !== true){
+                document.getElementById("login").style.visibility = "visible";
+                document.getElementById("reg").remove();
+        }
+    </script>    
+    </header>
+<body>
+    <div class="formulario">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRFk6jvaglee77SOSwpja8WQFFbfP8iQ3I-ts1RXN2XPqasg/viewform?embedded=true" width="640" height="1334" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+    </div>
+</body>
+</html>

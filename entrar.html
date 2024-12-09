@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" href="styleentrar.css">
+</head>
+<body>
+    <div id="imagem"></div>
+    <div id="login-container">
+        <div class="form-container" id="login-form">
+            <img src="rumojoblogo.jpeg"  alt="">
+            <h2>Login</h2>
+            <form id="login">
+                <label for="login-name">Nome:</label>
+                <input type="name" id="login-name" required>
+                <label for="login-password">Senha:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <p>Não tem uma conta? <a href="javascript:void(0);" onclick="showRegisterForm()">Cadastre-se</a></p>
+        </div>
+
+        <div class="form-container" id="register-form" style="display:none;">
+            <img src="rumojoblogo.jpeg"  alt="">
+            <h2>Cadastro</h2>
+            <form id="register">
+                <label for="register-name">Nome:</label>
+                <input type="text" id="register-name" required>
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" required>
+                <label for="register-password">Senha:</label>
+                <input type="password" id="register-password" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="javascript:void(0);" onclick="showLoginForm()">Faça login</a></p>
+        </div>
+    </div>
+
+    <script src="entrar.js"></script>
+</body>
+</html>

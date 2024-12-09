@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#imagem{
+    width: 70%;
+    height: 100%;
+}
+
+
+body {
+    background-image: url(medias/atuação-estratégica-de-ti.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#login-container {
+    height: 100%;
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    background: #ffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form label {
+    margin-left: 20%;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    margin-left: 20%;
+    width: 60%;
+    padding: 10px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form button {
+    margin-left: 20%;
+    width: 60%;
+    padding: 10px;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    transition: 0.4s;
+    background-color: rgb(235, 192, 84);
+}
+
+p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+a {
+    color: rgb(197, 149, 29);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(235, 192, 84);
+    text-decoration: underline;
+  }

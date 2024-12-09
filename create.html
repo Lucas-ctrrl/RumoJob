@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Profissão</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body id="everything" style="display: flex;">
+    <div class="form-container">
+        <h1>Registro de Profissão</h1>
+        <form id="registration-form">
+            <!-- Nome -->
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required placeholder="Digite o nome da profissão">
+
+            <!-- Interesses -->
+            <label>Selecione os interesses ligados a profissão:</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Liderança" />Liderança</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Criativo" />Criativo</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Trabalhar com Dados"/>Trabalhar com Dados</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Eletronica" />Eletrônica</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Resolver Problemas"/>Resolver Problemas</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Trabalhar com as mãos"/>Trabalhar com as mãos</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Trabalhar com pessoas"/>Trabalhar com pessoas</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Programacao" />Programação</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Rede" /> Rede</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Cibersegurança" />Cibersegurança</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Gerencia" />Gerenciamento</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Informatica" />Informática</label>
+            <label class="interesses"><input type="checkbox" name="interests" value="Automação" />Automação</label>
+            <!-- Salário -->
+            <label for="salary">Faixa Salarial da Profissão:</label>
+            <input type="text" id="salary" name="salary" placeholder="Ex: 'R$3.000 - R$4.000'" required>
+
+            <!-- Descrição -->
+            <label for="description">Descrição:</label>
+            <textarea id="description" name="description" rows="4" placeholder="Descreva a Profissão" required></textarea>
+
+            <!-- Como se tornar -->
+            <label for="howToBecome">Como se tornar:</label>
+            <textarea id="howToBecome" name="howToBecome" rows="4" placeholder="Informe os cursos (e sua duração) necessários e especializantes." required></textarea>
+
+            <!-- Habilidades -->
+            <label for="skills">Habilidades:</label>
+            <input type="text" id="skills" name="skills" placeholder="Ex: Programação, Design, Marketing" required>
+
+            <!-- Área -->
+            <label for="area">Área de Atuação:</label>
+            <select id="area" name="area" required>
+                <option value="">Selecione sua área</option>
+                <option value="TI">Informática</option>
+                <option value="Auto">Automação</option>
+            </select>
+
+            <label for="progression">Progressão da Carreira:</label>
+            <input type="text" id="progression" name="progression" placeholder="Ex: Analista de Sistemas Pleno → Analista de Sistemas Sênior → Gerente de TI." required>
+
+            <!-- Vídeo -->
+            <label for="video">Vídeo da Profissão:</label>
+            <input type="url" id="video" name="video" required>
+
+            <!-- Botão de Envio -->
+            <button id="submitBtn" type="submit">Registrar</button>
+        </form>
+        <a href="index.html">Voltar para Home</a>
+    </div>
+    <script>
+        if (JSON.parse(sessionStorage.getItem('isAdmin')) == true){
+            document.getElementById("everything").style.display = "flex";
+        } else
+        if (JSON.parse(sessionStorage.getItem('isAdmin')) !== true){
+            document.getElementById("everything").style.display = "none";
+        }
+    </script>
+    <script src="create.js"></script>
+</body>
+</html>
